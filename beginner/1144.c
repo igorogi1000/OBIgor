@@ -1,21 +1,25 @@
 #include <stdio.h>
 
 int main(void) {
-	int x, y, i, j;
+	int sub = 1;
+	int sum1 = 1;
+	int sum2 = 2;
+	int a, b, c, i;
+	b = 1;
 	
-	scanf("%d %d", &x, &y);
+	int n = 5;
 	
-	int atual = 1;
-	for (i=0; i<y/x; i++) {
-		for (j=0; j<x; j++) {
-			printf("%d", atual);
-			if (j != x-1) {
-				printf(" ");
-			}
-			atual++;
+	for (a = 1; a <= n; a++) {
+		c = a*b;
+		if (a*a != b) {
+			c -= sub;
+			sub++
 		}
-		printf("\n");
+		printf("%d %d %d\n", a, b, c);
+		b++;
+		c = a*b;
+		printf("%d %d %d\n", a, b, c);
+		b += sum2;
+		sum2 += 2;
 	}
-	
-	return 0;
 }
